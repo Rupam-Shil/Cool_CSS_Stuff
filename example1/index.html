@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Example Site</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="container">
+				<a class="logo" href="#">Remember<span>That</span></a>
+				<img
+					id="mobile-cta"
+					class="mobile-menu"
+					src="./projectfiles/images/menu.svg"
+					alt="Open Navigation"
+				/>
+				<nav>
+					<img
+						id="mobile-exit"
+						class="mobile-menu-exit"
+						src="./projectfiles/images/exit.svg"
+						alt="Close Button"
+					/>
+					<ul class="primary-nav">
+						<li class="current"><a href="#">Home</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Pricing</a></li>
+					</ul>
+					<ul class="secondary-nav">
+						<li><a href="#">Contact</a></li>
+						<li><a href="#" class="go-premium-cta">Go premium</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<section class="hero">
+			<div class="container">
+				<div class="left-col">
+					<p class="subhead">It's Nitty &amp; Gritty!</p>
+					<h1>A Task App That Doesn't Stink</h1>
+					<div class="hero-cta">
+						<a href="#" class="primary-cta">Try for free</a>
+						<a href="#" class="watch-video-cta">
+							<img
+								src="./projectfiles/images/watch.svg"
+								alt="watch a video"
+							/>Watch a video
+						</a>
+					</div>
+				</div>
+				<img
+					src="./projectfiles/images/illustration.svg"
+					class="hero-img"
+					alt="illustration"
+				/>
+			</div>
+		</section>
+		<section class="features-section">
+			<div class="container">
+				<ul class="features-list">
+					<li>Unlimited Tasks</li>
+					<li>SMS Task Reminders</li>
+					<li>Confetti Explosions upon Task Completions</li>
+					<li>Social Media Collaborations</li>
+					<li>Real Time Collaborations</li>
+					<li>Other awesome features</li>
+				</ul>
+
+				<img
+					src="./projectfiles/images/holding-phone.jpg"
+					alt="Man Holding Phone"
+				/>
+			</div>
+		</section>
+		<section class="testimonials-section">
+			<div class="container">
+				<ul>
+					<li>
+						<img src="./projectfiles/images/person.jpg" alt="A dp" />
+						<blockquote>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+							suscipit nemo unde ipsum a numquam, quas explicabo repellat
+							molestias quam dolorum cumque, tempora quidem earum, natus aperiam
+							ipsam architecto aspernatur.
+						</blockquote>
+						<cite>-Rupam Shil</cite>
+					</li>
+					<li>
+						<img src="./projectfiles/images/person.jpg" alt="A dp" />
+						<blockquote>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+							suscipit nemo unde ipsum a numquam, quas explicabo repellat
+							molestias quam dolorum cumque, tempora quidem earum, natus aperiam
+							ipsam architecto aspernatur.
+						</blockquote>
+						<cite>-Rupam Shil</cite>
+					</li>
+					<li>
+						<img src="./projectfiles/images/person.jpg" alt="A dp" />
+						<blockquote>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+							suscipit nemo unde ipsum a numquam, quas explicabo repellat
+							molestias quam dolorum cumque, tempora quidem earum, natus aperiam
+							ipsam architecto aspernatur.
+						</blockquote>
+						<cite>-Rupam Shil</cite>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="contact-section">
+			<div class="container">
+				<div class="contact-left">
+					<h2>Contact</h2>
+					<form>
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+						<label for="message">Message</label>
+						<textarea
+							name="message"
+							id="message"
+							cols="30"
+							rows="10"
+						></textarea>
+						<input
+							type="submit"
+							class="send-message-cta"
+							value="Send Message"
+						/>
+					</form>
+				</div>
+				<div class="contact-right">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.351709265693!2d77.57598551463592!3d13.013260617484153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17cc96f1fcd3%3A0x7e0d4a1c2caf7f1d!2s361%2C%2013th%20Main%20Rd%2C%20Raj%20Mahal%20Vilas%20Extension%2C%20Armane%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560080!5e0!3m2!1sen!2sin!4v1619348585379!5m2!1sen!2sin"
+						width="600"
+						height="450"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+					></iframe>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			const mobileBtn = document.querySelector('#mobile-cta');
+			const nav = document.querySelector('nav');
+			const mobileBrnExit = document.querySelector('#mobile-exit');
+			mobileBtn.addEventListener('click', () => {
+				nav.classList.add('menu-btn');
+			});
+			mobileBrnExit.addEventListener('click', () => {
+				nav.classList.remove('menu-btn');
+			});
+		</script>
+	</body>
+</html>
