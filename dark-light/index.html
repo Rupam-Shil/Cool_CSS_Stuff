@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>User Card Light and Dark</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<section class="sec">
+			<div class="card">
+				<div class="toggle">
+					<i class="far fa-moon"></i>
+				</div>
+				<div class="content">
+					<div class="imgText">
+						<div class="imgBx">
+							<img src="./pic.png" alt="#" />
+						</div>
+						<h3>
+							Rupam Shil <br />
+							<span> Frontend Developer </span>
+						</h3>
+					</div>
+					<ul class="sci">
+						<li>
+							<a href="https://www.facebook.com/rupam.shil.14" target="_blank"
+								><i class="fab fa-facebook"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://github.com/Rupam-Shil" target="_blank"
+								><i class="fab fa-github"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/rupam-shil/" target="_blank"
+								><i class="fab fa-linkedin"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<script>
+			const sec = document.querySelector('.sec');
+			const toggle = document.querySelector('.toggle');
+			toggle.addEventListener('click', () => {
+				sec.classList.toggle('dark');
+				if (sec.classList.contains('dark')) {
+					toggle.innerHTML = `<i class="fas fa-sun"></i>`;
+				} else {
+					toggle.innerHTML = `<i class="far fa-moon"></i>`;
+				}
+			});
+		</script>
+	</body>
+</html>
