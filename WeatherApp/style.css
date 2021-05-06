@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	background: url(./assets/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s;
+}
+.container .box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 90%;
+	width: 80%;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.25);
+	border-left: 1px solid rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.25);
+}
+.container .box input {
+	position: absolute;
+	top: 50px;
+	width: 50%;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(60px);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+	border-left: 1px solid rgba(255, 255, 255, 0.7);
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	transition: 0.5s;
+}
+.container .box input:focus {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+	border-left: 1px solid rgba(255, 255, 255, 0.7);
+	outline: none;
+	border-radius: 0px 20px 0 20px;
+}
+.container .box .place {
+	position: absolute;
+	top: 150px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 2px #333;
+
+	line-height: 1.8em;
+}
+.container .box .place h2 {
+	font-size: 2em;
+	font-weight: 500;
+}
+.container .box .place h3 {
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.container .box .temp {
+	position: relative;
+	height: 100px;
+	background: rgba(255, 255, 255, 0.25);
+	margin: 50px;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	backdrop-filter: blur(80px);
+	font-size: 3em;
+	font-weight: 800;
+	color: #fff;
+	text-shadow: 2px 2px 5px #333;
+}
+
+.container .box .type {
+	font-size: 1.4em;
+	color: #fff;
+	text-shadow: 2px 2px 5px #333;
+
+	margin-bottom: 10px;
+}
+.container .box .range {
+	font-size: 1.1em;
+	color: #fff;
+	text-shadow: 2px 2px 5px #333;
+
+	margin-bottom: 10px;
+}
