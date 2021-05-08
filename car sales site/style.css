@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+:root {
+	--text-color: #565656;
+	--primary-color: #008ad8;
+}
+body {
+	margin: 0;
+	background: #f4f4f4;
+	font-family: 'Lexend Deca', sans-serif;
+}
+.container {
+	margin: 2.8em;
+}
+.container h1 {
+	margin-bottom: 0;
+}
+.headings p {
+	color: var(--text-color);
+	font-size: 1.125rem;
+}
+.labels {
+	display: none;
+}
+.options {
+	position: relative;
+}
+.filter {
+	position: absolute;
+	top: 3em;
+	right: 1em;
+	background: #fff;
+	padding: 2em 1.5em;
+	border-radius: 6px;
+	box-shadow: 11px 18px 54px rgba(0, 0, 0, 0.11);
+	clip-path: circle(0% at 100% 0%);
+	transition: clip-path 0.3s ease-in-out;
+}
+.chk-container {
+	margin-bottom: 1.125em;
+}
+.chk-container:last-of-type {
+	margin: 0;
+}
+.search {
+	border: none;
+	padding: 0.8em;
+	border-radius: 2em;
+	background: #fff url('./assets/search.svg') no-repeat right 0.8em center;
+	width: 100%;
+	overflow: auto;
+}
+.search:focus {
+	outline: thin dotted;
+}
+.icons {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3em;
+}
+.far,
+.fas {
+	cursor: pointer;
+}
+.menu {
+	margin: 0 0.5em;
+	cursor: pointer;
+}
+.cars,
+.labels {
+	margin: -1em -1em 2em;
+	padding: 1em;
+	border-radius: 6px;
+	transition: 0.3s;
+}
+.cars:hover {
+	background: white;
+}
+.car-name {
+	text-decoration: none;
+	color: var(--primary-color);
+	font-size: 1.22rem;
+}
+.car-location {
+	color: var(--text-color);
+	font-size: 1.125rem;
+}
+.cols-2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.car-price {
+	font-size: 1.5rem;
+	margin: 0;
+}
+@media only screen and (min-width: 900px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.labels {
+		display: block;
+		background-color: var(--primary-color);
+		color: whitesmoke;
+		text-transform: uppercase;
+		font-size: 0.875rem;
+		display: grid;
+		grid-template-columns: 40% 30% 20% auto;
+		padding: 0.2em 1em;
+	}
+	.cars {
+		display: grid;
+		grid-template-columns: 40% 30% auto;
+	}
+	.far,
+	.fas {
+		margin-right: 1.6em;
+	}
+	.icons {
+		margin-bottom: 0;
+	}
+	.headings p {
+		margin: 0.5em 0 3rem;
+	}
+}

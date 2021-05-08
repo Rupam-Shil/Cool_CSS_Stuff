@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Car Sales Site</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/855a0b1d3e.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="headings">
+					<h1>Available Cars</h1>
+					<p>There are 15 cars that match your criteria</p>
+				</div>
+				<div class="options">
+					<div class="icons">
+						<input type="text" class="search" />
+						<img src="./assets/menu.svg" class="menu" />
+					</div>
+
+					<div class="filter">
+						<div class="chk-container">
+							<input type="checkbox" id="new" />
+							<label for="new">New Cars</label>
+						</div>
+						<div class="chk-container">
+							<input type="checkbox" id="used" />
+							<label for="used">Used cars</label>
+						</div>
+						<div class="chk-container">
+							<input type="checkbox" id="dealer" />
+							<label for="dealer">Dealership</label>
+						</div>
+						<div class="chk-container">
+							<input type="checkbox" id="owner" />
+							<label for="owner">For sale by owner</label>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="labels">
+					<p class="lbl-details">Car Details</p>
+					<p class="lbl-location">Location</p>
+					<p class="lbl-price">Price</p>
+					<p class="lbl-action">Action</p>
+				</div>
+				<div class="cars">
+					<a href="#" class="car-name">2017 Toyota Highlander V4</a>
+					<p class="car-location">1944 Scrimba Ln<br />Youngstown, OH 44481</p>
+					<div class="cols-2">
+						<p class="car-price">$17400</p>
+						<i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
+					</div>
+				</div>
+				<div class="cars">
+					<a href="#" class="car-name">2012 Toyota Tundra 4x4</a>
+					<p class="car-location">
+						301 Fantasy Dr<br />Beverly Hills, CA 90210
+					</p>
+					<div class="cols-2">
+						<p class="car-price">$23,900</p>
+						<i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
+					</div>
+				</div>
+
+				<div class="cars">
+					<a href="#" class="car-name">2004 Dodge Ram 4x4</a>
+					<p class="car-location">9104 Falsety Ave<br />AnonyVille, FL 40440</p>
+					<div class="cols-2">
+						<p class="car-price">$7,998</p>
+						<i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
+					</div>
+				</div>
+
+				<div class="cars">
+					<a href="#" class="car-name">2021 Tesla Model 3</a>
+					<p class="car-location">993 Fiscal St<br />Boulder, CO 93391</p>
+					<div class="cols-2">
+						<p class="car-price">$37,490</p>
+						<i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
+					</div>
+				</div>
+
+				<div class="cars">
+					<a href="#" class="car-name">2012 Toyota Tundra 4x4</a>
+					<p class="car-location">
+						301 Fantasy Dr<br />Beverly Hills, CA 90210
+					</p>
+					<div class="cols-2">
+						<p class="car-price">$23,900</p>
+						<i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
+					</div>
+				</div>
+
+				<div class="cars">
+					<a href="#" class="car-name">2004 Dodge Ram 4x4</a>
+					<p class="car-location">9104 Falsety Ave<br />AnonyVille, FL 40440</p>
+					<div class="cols-2">
+						<p class="car-price">$7,998</p>
+						<i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
+					</div>
+				</div>
+
+				<div class="cars">
+					<a href="#" class="car-name">2021 Tesla Model 3</a>
+					<p class="car-location">993 Fiscal St<br />Boulder, CO 93391</p>
+					<div class="cols-2">
+						<p class="car-price">$37,490</p>
+						<i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
