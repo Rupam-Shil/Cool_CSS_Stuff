@@ -1,0 +1,372 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Bebas Neue';
+}
+
+.menu-btn {
+	width: 2.5em;
+	cursor: pointer;
+}
+
+.top-bg-container {
+	height: 100vh;
+	position: absolute;
+	width: 90%;
+	top: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: 80% auto;
+	z-index: -1;
+}
+
+.light-streaks {
+	background: #b2dd9e url('./assets/streaks.png');
+	background-blend-mode: overlay;
+	background-size: cover;
+	height: 100vh;
+}
+.blue-col {
+	background: #7988be;
+}
+.container {
+	margin: 0 1em;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+nav .logo {
+	display: inline-block;
+	background-color: black;
+	color: #fff;
+	padding: 0.2em 0.4em;
+	font-size: 1.8rem;
+}
+.logo span {
+	color: #6889ff;
+}
+nav ul {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 66%;
+	background-color: #363b4e;
+	height: 100vh;
+	z-index: 1000;
+	padding: 2em 0;
+	transform: translateX(100%);
+	transition: transform 0.3s;
+}
+nav ul li a {
+	color: #fff;
+	display: block;
+	padding: 0.4em 1.5em;
+	font-size: 1.5rem;
+	text-align: right;
+	transition: 0.4s;
+}
+nav ul li:hover a {
+	transform: scale(1.2) translateX(-40px);
+	color: #b2dd9e;
+}
+.exit-btn {
+	text-align: right;
+}
+.exit-btn:hover img {
+	transform: scale(1.2);
+}
+.exit-btn img {
+	width: 2em;
+	margin: 2em;
+	transition: 0.3s;
+	cursor: pointer;
+}
+main .content {
+	text-align: center;
+	margin: 8em 3em 0;
+	height: 75vh;
+}
+h1 {
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 92%;
+}
+.type p {
+	font-family: 'Montserrat';
+	font-size: 1.125rem;
+	line-height: 141.6%;
+}
+.drone-container {
+	position: relative;
+	margin: 5em auto;
+	width: 65%;
+}
+.blur,
+.drone {
+	position: absolute;
+	left: 0;
+}
+.blur {
+	opacity: 0.8;
+	top: 1em;
+	animation: pulse 2s alternate-reverse infinite;
+}
+.drone {
+	animation: hover 2s alternate-reverse infinite;
+}
+@keyframes hover {
+	from {
+		transform: translateY(-30px);
+	}
+}
+@keyframes pulse {
+	from {
+		opacity: 0;
+	}
+}
+/* Section Quote */
+.quote {
+	width: 90%;
+	background-color: #303853;
+	color: white;
+	position: relative;
+	padding: 4em 2em;
+	margin-left: auto;
+	height: 75vh;
+}
+.quote::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('./assets//stadium.png') left;
+	width: 100%;
+	height: 100%;
+	opacity: 17%;
+}
+blockquote {
+	margin: 0 0 2em 0;
+	font-size: 1.5rem;
+}
+cite {
+	position: relative;
+	padding-left: 1.5em;
+}
+cite::before {
+	content: '';
+	position: absolute;
+	width: 1em;
+	border-bottom: 1px solid white;
+	top: 50%;
+	left: 0;
+}
+/* section photo  */
+.gallery {
+	display: block;
+	width: 90%;
+	margin-left: auto;
+	margin-bottom: 2em;
+}
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+footage-content p {
+	font-family: 'Montserrat';
+}
+.gallery-container {
+	display: grid;
+	margin-top: 2em;
+	grid-template-areas:
+		'. a b'
+		'c d .'
+		'. e .';
+}
+.gallery-container img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 1/1;
+}
+.gallery-container img:nth-child(1) {
+	grid-area: a;
+}
+.gallery-container img:nth-child(2) {
+	grid-area: b;
+}
+.gallery-container img:nth-child(3) {
+	grid-area: c;
+}
+.gallery-container img:nth-child(4) {
+	grid-area: d;
+}
+.gallery-container img:nth-child(5) {
+	grid-area: e;
+}
+/* section contact     */
+.contact {
+	background: #b3dd9e;
+}
+
+h3 {
+	padding: 1em 1em 1em 10%;
+	font-size: 2rem;
+	background-color: #9fc88c;
+	display: inline-block;
+	margin: 0;
+	font-weight: normal;
+}
+.cols-2 {
+	width: 90%;
+	margin: 2em 2em 0 10%;
+	padding-right: 2em;
+	padding-bottom: 2em;
+}
+label {
+	display: block;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+input {
+	width: 100%;
+	border: none;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+button {
+	background: black;
+	border: none;
+	padding: 0.8em;
+	width: 100%;
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Bebas Neue';
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+.other-info {
+	margin-top: 3em;
+	width: 50%;
+}
+.other-info ul li {
+	padding: 0.5em;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	display: block;
+	border-radius: 0.2em;
+	font-family: 'Montserrat';
+	font-size: 0.9rem;
+}
+.other-info a {
+	color: black;
+}
+@media only screen and (min-width: 900px) {
+	html {
+		font-size: 20px;
+	}
+	.top-bg-container {
+		width: 80%;
+		grid-template-columns: 60% auto;
+	}
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
+	main .content {
+		display: flex;
+		text-align: left;
+		padding: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	h1 {
+		font-size: 5rem;
+		width: 80%;
+	}
+	.type p {
+		width: 80%;
+	}
+	.menu-btn,
+	.exit-btn {
+		display: none;
+	}
+	nav ul {
+		transform: translateX(0);
+		width: unset;
+		background: none;
+		display: flex;
+		padding-top: 1em;
+
+		position: unset;
+		height: auto;
+	}
+	nav ul li a {
+		font-size: 1rem;
+		padding: 0 1rem;
+	}
+	nav ul li:hover a {
+		background: #363b4e;
+		transform: unset;
+	}
+	.quote {
+		width: 80%;
+		display: grid;
+		place-items: center;
+	}
+	blockquote,
+	cite {
+		width: 50%;
+		justify-self: center;
+	}
+	blockquote {
+		font-size: 2rem;
+	}
+	.gallery {
+		display: flex;
+		gap: 4rem;
+	}
+	.gallery-container {
+		margin-top: -5em;
+		z-index: 100000;
+	}
+	h2 {
+		font-size: 4rem;
+		font-weight: normal;
+		line-height: 91.6%;
+	}
+	.cols-2 {
+		display: flex;
+		gap: 3rem;
+	}
+	.form-container,
+	.other-info {
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+	.other-info {
+		margin-top: 2em;
+	}
+	input {
+		padding: 1.5em;
+	}
+}
