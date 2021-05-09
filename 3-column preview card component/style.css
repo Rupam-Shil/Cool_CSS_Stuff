@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+section {
+	height: 100vh;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lexend Deca', sans-serif;
+}
+.container {
+	padding: 4rem 2rem;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+}
+.container div {
+	padding: 2rem;
+	color: #fff;
+}
+.container h1 {
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	margin-bottom: 1.4rem;
+}
+.container button {
+	background: #fff;
+	border: none;
+	border-radius: 2rem;
+	padding: 0.6rem 1.2rem;
+	transition: 0.3s;
+}
+.container button:hover {
+	background-color: inherit;
+	color: white;
+	border: 1px solid #fff;
+}
+.container p {
+	font-size: 0.8rem;
+	line-height: 150%;
+	font-weight: 400;
+	width: 95%;
+	margin-bottom: 2rem;
+}
+.box1 {
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	background-color: #e28525;
+}
+.box1 button {
+	color: #e28525;
+}
+.box2 {
+	background-color: #016972;
+}
+.box2 button {
+	color: #016972;
+}
+.box3 {
+	background-color: #00403f;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+.box3 button {
+	color: #00403f;
+}
+@media only screen and (min-width: 900px) {
+	.container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: unset;
+		width: 60%;
+	}
+	.container div {
+	}
+	section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.box1 {
+		border-radius: unset;
+
+		border-top-left-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+	}
+	.box3 {
+		border-radius: unset;
+		border-top-right-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+	}
+	.container p {
+		margin-bottom: 3rem;
+	}
+}
