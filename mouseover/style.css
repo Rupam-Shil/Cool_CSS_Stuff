@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+		no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+		no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.box:nth-child(1) {
+	filter: blur(10px);
+}
+.box:nth-child(2) {
+	clip-path: circle(150px at var(--x) var(--y));
+}
+.box h1 {
+	position: absolute;
+	color: #fff;
+	font-size: 10rem;
+	transform: translate(0, 0);
+	transform: translate(calc(var(--x) / 25), calc(var(--y) / 25));
+}
+.circle {
+	position: absolute;
+	top: -150px;
+	left: -150px;
+	width: 300px;
+	height: 300px;
+	border: 0.2rem solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+	transform: translate(var(--x), var(--y));
+}
