@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	place-items: center;
+}
+body {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	height: 100vh;
+}
+img {
+	width: 50px;
+	height: 50px;
+}
+.bg,
+.bg2 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.bg {
+	z-index: -1;
+	background-color: #226dbc;
+	clip-path: polygon(71% 85%, 100% 44%, 100% 100%, 0% 100%);
+}
+.bg2 {
+	z-index: 0;
+	background: #2a5f98;
+	clip-path: polygon(71% 94%, 100% 56%, 100% 100%, 0% 100%);
+}
+.container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	height: auto;
+
+	/* align-self: center; */
+	margin: 0 50px;
+}
+ul {
+	list-style: none;
+	perspective: 1000px;
+	width: 500px;
+}
+ul li {
+	display: grid;
+	grid-template-columns: 20% auto;
+	border-radius: 10px;
+	padding: 15px;
+	cursor: pointer;
+	transform: rotateY(-30deg) rotateX(15deg);
+	position: absolute;
+	border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+	mix-blend-mode: multiply;
+	transition: 0.2s ease-in-out;
+}
+ul li:nth-child(1) {
+	background: #bfe8fc;
+	top: -90px;
+	z-index: 3;
+}
+ul li:nth-child(2) {
+	background: #faffc8;
+	z-index: 2;
+}
+ul li:nth-child(3) {
+	background: rgb(242, 228, 255);
+	top: 90px;
+	z-index: 1;
+}
+ul li:hover {
+	transform: rotateY(-22deg) rotateX(7deg) scale(1.03);
+	z-index: 4;
+	mix-blend-mode: normal;
+}
+h1 {
+	font-size: 3rem;
+	margin-top: 0;
+}
+#left > p {
+	color: rgb(73, 73, 73);
+	line-height: 1.5rem;
+}
