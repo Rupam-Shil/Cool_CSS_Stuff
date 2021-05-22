@@ -1,0 +1,29 @@
+@media only screen and (max-width: 768px) {
+	body {
+		overflow: unset;
+		height: unset;
+		font-size: 14px;
+		&::before {
+			width: 60%;
+			left: -3rem;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	section {
+		.container {
+			margin-top: 4rem;
+			grid-template-columns: 1fr;
+			height: max-content;
+			margin-bottom: 2rem;
+			.mobile__section {
+				justify-self: center;
+			}
+			.content__section {
+				text-align: center;
+				margin-top: 2rem;
+			}
+		}
+	}
+}
