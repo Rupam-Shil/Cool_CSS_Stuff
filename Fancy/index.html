@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="waterbg"></div>
+		<div class="container">
+			<div class="title">
+				<div class="title-1">Spectacular Series of</div>
+				<div class="title-2">Events that will</div>
+				<div class="title-3">Unwind You.</div>
+			</div>
+			<p>Join us for a journey into the unknown and wow your senses</p>
+		</div>
+		<div class="img"></div>
+		<div class="cursor"></div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+			integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+			integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="./hover.js"></script>
+		<script>
+			let textWrapper = document.querySelector('.title-1');
+			textWrapper.innerHTML = textWrapper.textContent.replace(
+				/\S/g,
+				"<span class='letter'>$&</span>"
+			);
+
+			let textWrapper2 = document.querySelector('.title-2');
+			textWrapper2.innerHTML = textWrapper2.textContent.replace(
+				/\S/g,
+				"<span class='letter'>$&</span>"
+			);
+
+			let textWrapper3 = document.querySelector('.title-3');
+			textWrapper3.innerHTML = textWrapper3.textContent.replace(
+				/\S/g,
+				"<span class='letter'>$&</span>"
+			);
+			let tl = gsap.timeline();
+
+			tl.to('.title-1 .letter', {
+				opacity: 1,
+				y: '0',
+				clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+				stagger: '.03',
+			});
+			tl.to(
+				'.title-2 .letter',
+				{
+					opacity: 1,
+					y: '0',
+					clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+					stagger: '.03',
+				},
+				'-=.7'
+			);
+			tl.to(
+				'.title-3 .letter',
+				{
+					opacity: 1,
+					y: '0',
+					clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+					stagger: '.03',
+				},
+				'-=.7'
+			);
+			tl.from('p', { opacity: 0, y: '-50px' }, '-=.7');
+
+			tl.to(
+				'.img',
+				{
+					clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+					ease: Back.easeOut.config(1.7),
+					duration: 0.75,
+				},
+				'-=.5'
+			);
+
+			var myAnimation = new hoverEffect({
+				parent: document.querySelector('.img'),
+				intensity: 0.3,
+				image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
+				image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
+				displacementImage: 'https://assets.codepen.io/2621168/dis.png',
+			});
+			let title = document.querySelector('.container');
+			let img = document.querySelector('.img');
+			let cursorCircle = document.querySelector('.cursor');
+
+			let cursor = {
+				x: 0,
+				y: 0,
+			};
+			document.addEventListener('mousemove', (e) => {
+				cursor.x = -e.clientX * 0.1;
+				cursor.y = -e.clientY * 0.1;
+				img.style.transform = `translate(${cursor.x}px,${cursor.y}px)`;
+				cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+			});
+		</script>
+	</body>
+</html>
