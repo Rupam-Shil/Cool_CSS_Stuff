@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+:root {
+	--bg-color: hsl(49 37% 94%);
+	--typewriter-speed: 6s;
+}
+body {
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	text-align: center;
+	background: var(--bg-color);
+}
+h1 {
+	font-size: clamp(1rem, 3vw+1rem, 4rem);
+	position: relative;
+	font-family: 'Source Sans Pro';
+	width: max-content;
+}
+h1::before,
+h1::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+h1::before {
+	background: var(--bg-color);
+	/* border-left: 2px solid black; */
+	animation: typewriter var(--typewriter-speed) steps(24) 1s forwards;
+}
+h1::after {
+	width: 0.125em;
+	background: black;
+	animation: typewriter var(--typewriter-speed) steps(24) 1s forwards,
+		blink 750ms steps(24) infinite;
+}
+@keyframes typewriter {
+	to {
+		left: 100%;
+	}
+}
+@keyframes blink {
+	to {
+		background: transparent;
+	}
+}
+.subtitle {
+	opacity: 0;
+	transform: translateY(3rem);
+	animation: fadeinUp 2s ease var(--typewriter-speed) forwards;
+	color: hsl(0 0% 0% /0.7);
+	font-size: 2rem;
+	font-weight: 400;
+}
+@keyframes fadeinUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
