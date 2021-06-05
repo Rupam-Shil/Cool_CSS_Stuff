@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<section>
+			<div class="main">
+				<img src="./assets/google.png" alt="" />
+				<div class="searchBox">
+					<input
+						type="text"
+						name=""
+						class="query"
+						id=""
+						placeholder="Search Google as mic dont work"
+					/>
+					<div class="icons">
+						<div><img src="./assets/search.png" alt="" /></div>
+						<div><img src="./assets/mic.png" alt="" /></div>
+					</div>
+				</div>
+				<div class="button">
+					<button class="searchBtn">Google Search</button>
+				</div>
+			</div>
+		</section>
+		<script>
+			const queryBtn = document.querySelector('.query');
+			const btn = document.querySelector('.searchBtn');
+			btn.addEventListener('click', () => {
+				window.open(
+					`https://www.google.com/search?q=${queryBtn.value}`,
+					'_self'
+				);
+			});
+			queryBtn.addEventListener('keyup', (e) => {
+				e.keyCode === 13
+					? window.open(
+							`https://www.google.com/search?q=${queryBtn.value}`,
+							'_self'
+					  )
+					: null;
+			});
+		</script>
+	</body>
+</html>
