@@ -1,0 +1,22 @@
+:root {
+	--bg-color: #6f4037;
+}
+
+.nav-wrapper {
+	background: var(--bg-color);
+	padding: 0 1rem;
+}
+.slider .indicators .indicator-item.active {
+	background-color: var(--bg-color);
+}
+.move__up {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+.parallax-container {
+	min-height: 280px;
+	height: auto;
+}
+.icon-coffee {
+	color: var(--bg-color);
+}
