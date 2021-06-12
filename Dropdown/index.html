@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DropDown</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<section>
+			<div class="bg">Red</div>
+			<select class="selectColor">
+				<option value="#ff2323">Red</option>
+				<option value="#ffff12">Yellow</option>
+				<option value="#66ff00">Green</option>
+				<option value="#9b1fe8">Purple</option>
+				<option value="#ff69b4">Pink</option>
+			</select>
+		</section>
+	</body>
+	<script>
+		const change = document.querySelector('.selectColor');
+
+		function changeColor(color) {
+			change.style.borderRight = `10px solid ${color.value}`;
+			let bg = document.querySelector('.bg');
+			let selectColor = color.value;
+			bg.style.background = selectColor;
+			bg.innerText = color.options[color.selectedIndex].text;
+		}
+		change.addEventListener('change', () => changeColor(change));
+	</script>
+</html>
