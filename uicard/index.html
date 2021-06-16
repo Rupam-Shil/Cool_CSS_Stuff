@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sidebar</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./css/sytle.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- closebtn  -->
+			<div class="container__close"><i class="fas fa-times"></i></div>
+
+			<!-- head  -->
+			<div class="container__head">
+				<div class="container__head-left">
+					<button class="share-btn">
+						<i class="fas fa-share"></i>
+						Share
+					</button>
+				</div>
+				<div class="container__head-right">
+					<button class="folder-btn">
+						<i class="fas fa-folder-plus"></i>
+					</button>
+					<button class="like-btn">
+						<i class="fas fa-heart"></i>
+					</button>
+				</div>
+			</div>
+			<!-- header  -->
+			<h3 class="header">Comments</h3>
+			<!-- text box for comment drop   -->
+			<textarea
+				id=""
+				class="write__comment"
+				placeholder="Share your thoughts"
+			></textarea>
+
+			<!-- filter section -->
+			<div class="filter__section">
+				<button class="active">Most helpful</button>
+				<button>Most liked</button>
+				<button>All</button>
+			</div>
+			<!-- comment section  -->
+			<div class="comment__section">
+				<div class="comment__section-left">
+					<img src="./assets/pic.jpg" alt="" />
+				</div>
+				<div class="comment__section-middle">
+					<h2 class="name">Rupam Shil</h2>
+					<p class="name__comment">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+						eaque?
+					</p>
+					<div class="time">
+						<p class="min">12m</p>
+						<button class="like">Like</button>
+						<button class="reply">Reply</button>
+					</div>
+				</div>
+				<div class="comment__section-right">
+					<button class="modalBtn"><i class="fas fa-ellipsis-h"></i></button>
+					<div class="modal__box">
+						<ul>
+							<li>Delete</li>
+							<li>Report</li>
+							<li>Block</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="comment__section">
+				<div class="comment__section-left">
+					<img src="./assets/pic.jpg" alt="" />
+				</div>
+				<div class="comment__section-middle">
+					<h2 class="name">Rupam Shil</h2>
+					<p class="name__comment">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+						eaque?
+					</p>
+					<div class="time">
+						<p class="min">12m</p>
+						<button class="like">Like</button>
+						<button class="reply">Reply</button>
+					</div>
+				</div>
+				<div class="comment__section-right">
+					<button class="modalBtn"><i class="fas fa-ellipsis-h"></i></button>
+					<div class="modal__box">
+						<ul>
+							<li>Delete</li>
+							<li>Report</li>
+							<li>Block</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="comment__section">
+				<div class="comment__section-left">
+					<img src="./assets/pic.jpg" alt="" />
+				</div>
+				<div class="comment__section-middle">
+					<h2 class="name">Rupam Shil</h2>
+					<p class="name__comment">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+						eaque?
+					</p>
+					<div class="time">
+						<p class="min">12m</p>
+						<button class="like">Like</button>
+						<button class="reply">Reply</button>
+					</div>
+				</div>
+				<div class="comment__section-right">
+					<button class="modalBtn"><i class="fas fa-ellipsis-h"></i></button>
+					<div class="modal__box">
+						<ul>
+							<li>Delete</li>
+							<li>Report</li>
+							<li>Block</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
