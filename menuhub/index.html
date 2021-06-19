@@ -44,9 +44,69 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="slide__modal"></div>
+				<div class="slide__modal active">
+					<div class="login">
+						<div class="heading">
+							<img src="./assets/logo.png" alt="" />
+							<h2>Login</h2>
+						</div>
+						<form>
+							<label for="email">Email/Phone</label>
+							<input type="text" name="" id="email" />
+							<label for="password">Password</label>
+							<input type="text" name="" id="password" />
+							<input type="submit" value="Login" />
+							<div class="second">
+								<button class="register__btn">Register</button>
+								<a href="#">Forgot Password?</a>
+							</div>
+						</form>
+						<div class="down">
+							<p>Facing Trouble?</p>
+							<p>Call us at +91-##########, +91-##########</p>
+						</div>
+					</div>
+					<div class="register">
+						<div class="heading">
+							<img src="./assets/logo.png" alt="" />
+							<h2>Register</h2>
+						</div>
+						<form>
+							<label for="name">Name</label>
+							<input type="text" name="" id="name" />
+							<label for="email">Email</label>
+							<input type="email" name="" id="email" />
+							<label for="phone">Phone</label>
+							<input type="number" name="" id="phone" />
+							<input type="submit" value="Register" />
+							<div class="second">
+								<button class="login__btn">Login</button>
+							</div>
+						</form>
+						<div class="down">
+							<p>Facing Trouble?</p>
+							<p>Call us at +91-##########, +91-##########</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		<script>
+			const registerBtn = document.querySelector('.register__btn');
+			const loginBtn = document.querySelector('.login__btn');
+			const modal = document.querySelector('.slide__modal');
+			const register = document.querySelector('.register');
+			registerBtn.addEventListener('click', (e) => {
+				modal.classList.add('active');
+				modal.classList.remove('deactivate');
+
+				e.preventDefault();
+			});
+			loginBtn.addEventListener('click', (e) => {
+				modal.classList.remove('active');
+				modal.classList.add('deactivate');
+				e.preventDefault();
+			});
+		</script>
 	</body>
 </html>
