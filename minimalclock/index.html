@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Minimalist Clock</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<section class="clock container">
+			<div class="clock__container grid">
+				<div class="clock__content grid">
+					<div class="clock__circle">
+						<span class="clock__twelve"></span>
+						<span class="clock__three"></span>
+						<span class="clock__six"></span>
+						<span class="clock__nine"></span>
+
+						<div class="clock__rounder"></div>
+						<div class="clock__hour" id="clock-hour"></div>
+						<div class="clock__minutes" id="clock-minutes"></div>
+						<div class="clock__seconds" id="clock-seconds"></div>
+						<div class="clock__theme">
+							<i class="bx bxs-moon" id="theme-button"></i>
+						</div>
+					</div>
+					<div>
+						<div class="clock__text">
+							<div class="clock__text-hour" id="text-hour">10</div>
+							<div class="clock__text-minutes" id="text-minutes">10</div>
+							<div class="clock__text-ampm" id="text-ampm">am</div>
+						</div>
+						<div class="clock__date">
+							<span id="date-day">01</span>
+							<span id="date-month">01</span>
+							<span id="date-year">2021</span>
+						</div>
+					</div>
+				</div>
+				<a
+					href="https://www.instagram.com/thesyntacticsugar/"
+					class="clock__logo"
+					target="_blank"
+					>The Syntactic Sugar</a
+				>
+			</div>
+		</section>
+		<script src="./script.js"></script>
+	</body>
+</html>
