@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+		/>
+		<style>
+			body {
+				margin: 0;
+				background-color: #1d1d1e;
+				font-family: 'Roboto', sans-serif;
+			}
+			* {
+				outline: none;
+			}
+			.timeline-carousel {
+				padding: 86px 6.9444% 90px 6.9444%;
+				position: relative;
+				overflow: hidden;
+			}
+			.timeline-carousel:after,
+			.timeline-carousel:before {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				height: 100%;
+				width: 6.9444%;
+				background-color: #1d1d1e;
+				z-index: 3;
+				width: 6.9444%;
+			}
+			.timeline-carousel:after {
+				left: 0;
+			}
+			.timeline-carousel:before {
+				right: 0;
+				opacity: 0;
+			}
+			.timeline-carousel .slick-list {
+				overflow: visible;
+			}
+			.timeline-carousel .slick-dots {
+				bottom: -73px;
+			}
+			.timeline-carousel h1 {
+				color: #fff;
+				font-size: 46px;
+				line-height: 50pd;
+				margin-bottom: 40px;
+				font-weight: 900;
+			}
+			.timeline-carousel__image {
+				padding-right: 30px;
+			}
+			.timeline-carousel__item {
+				cursor: pointer;
+			}
+			.timeline-carousel__item .media-wrapper {
+				opacity: 0.4;
+				padding-bottom: 71.4%;
+				-webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+				transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+			}
+			.timeline-carousel__item:last-child .timeline-carousel__item-inner:after {
+				width: calc(100% - 30px);
+			}
+			.timeline-carousel__item-inner {
+				position: relative;
+				padding-top: 45px;
+			}
+			.timeline-carousel__item-inner:after {
+				position: absolute;
+				width: 100%;
+				top: 45px;
+				left: 0;
+				content: '';
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+			}
+			.timeline-carousel__item-inner .year {
+				font-size: 36px;
+				line-height: 36px;
+				color: #fff;
+				display: table;
+				letter-spacing: -1px;
+				padding-right: 10px;
+				background-color: #1d1d1e;
+				z-index: 1;
+				position: relative;
+				margin: -15px 0 20px;
+				font-weight: 900;
+			}
+			.timeline-carousel__item-inner .year:after {
+				content: '';
+				position: absolute;
+				display: block;
+				left: -10px;
+				top: 0;
+				height: 100%;
+				width: 10px;
+				background-color: #1d1d1e;
+				z-index: 3;
+			}
+			.timeline-carousel__item-inner .month {
+				font-size: 12px;
+				text-transform: uppercase;
+				color: #b38c52;
+				display: block;
+				margin-bottom: 10px;
+				font-weight: 900;
+			}
+			.timeline-carousel__item-inner p {
+				font-size: 12px;
+				line-height: 18px;
+				color: #fff;
+				width: 60%;
+				font-weight: 400;
+				margin-bottom: 15px;
+			}
+			.timeline-carousel__item-inner .read-more {
+				font-size: 12px;
+				color: #b38c52;
+				display: table;
+				margin-bottom: 10px;
+				font-weight: 900;
+				text-decoration: none;
+				position: relative;
+			}
+			.timeline-carousel__item-inner .read-more:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -1px;
+				width: 0;
+				border-bottom: 2px solid #b38c52;
+				-webkit-transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+				transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+			}
+			.timeline-carousel__item-inner .read-more:hover:after {
+				width: 100%;
+			}
+			.timeline-carousel__item-inner .pointer {
+				height: 29px;
+				position: relative;
+				z-index: 1;
+				margin: -4px 0 16px;
+			}
+			.timeline-carousel__item-inner .pointer:after,
+			.timeline-carousel__item-inner .pointer:before {
+				position: absolute;
+				content: '';
+			}
+			.timeline-carousel__item-inner .pointer:after {
+				width: 9px;
+				height: 9px;
+				border-radius: 100%;
+				top: 0;
+				left: 0;
+				background-color: #b38c52;
+			}
+			.timeline-carousel__item-inner .pointer:before {
+				width: 1px;
+				height: 100%;
+				top: 0;
+				left: 4px;
+				background-color: #b38c52;
+			}
+			.timeline-carousel .slick-active .media-wrapper {
+				opacity: 1 !important;
+			}
+			.slick-dots {
+				bottom: 60px;
+				list-style: none;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				text-align: center;
+				z-index: 2;
+			}
+			.slick-dots li {
+				cursor: pointer;
+				display: inline-block;
+				margin: 0 6px;
+				position: relative;
+				width: 10px;
+				height: 10px;
+			}
+			.slick-dots li:last-child {
+				margin-right: 0;
+			}
+			.slick-dots li.slick-active button {
+				background: #b38c52;
+				border-color: #b38c52;
+			}
+			.slick-dots li button {
+				display: block;
+				font-size: 0;
+				width: 10px;
+				height: 10px;
+				padding: 0;
+				background-color: rgba(255, 255, 255, 0.6);
+				border-color: rgba(255, 255, 255, 0.6);
+				cursor: pointer;
+				-webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+				transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+			}
+			.slick-dots li button:hover {
+				background: #b38c52;
+				border-color: #b38c52;
+			}
+			.link {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				padding: 20px;
+				z-index: 9999;
+			}
+			.link a {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				text-decoration: none;
+				color: #fff;
+			}
+			.link .fa {
+				font-size: 28px;
+				margin-right: 8px;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<!--Timeline carousel-->
+		<section class="timeline-carousel">
+			<h1>History timeline</h1>
+			<div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
+				<!--Timeline item-->
+				<div class="timeline-carousel__item">
+					<div class="timeline-carousel__image">
+						<div
+							class="media-wrapper media-wrapper--overlay"
+							style="
+								background: url('https://www.historyonthenet.com/wp-content/uploads/2016/12/135151-004-0D4D550E.jpg')
+									center center;
+								background-size: cover;
+							"
+						></div>
+					</div>
+					<div class="timeline-carousel__item-inner">
+						<span class="year">1914</span>
+						<span class="month">June 28</span>
+						<p>
+							Assassination of Archduke Franz Ferdinand of Austria, heir to the
+							Austro-Hungarian throne, who was killed in Sarajevo along with his
+							wife Duchess Sophie by Bosnian Serb Gavrilo Princip.
+						</p>
+						<a href="#" class="read-more">Read more</a>
+					</div>
+				</div>
+				<!--/Timeline item-->
+
+				<!--Timeline item-->
+				<div class="timeline-carousel__item">
+					<div class="timeline-carousel__image">
+						<div
+							class="media-wrapper media-wrapper--overlay"
+							style="
+								background: url('http://factsforkids.net/wp-content/uploads/2013/09/13.jpg')
+									center center;
+								background-size: cover;
+							"
+						></div>
+					</div>
+					<div class="timeline-carousel__item-inner">
+						<div class="pointer"></div>
+						<span class="month">July 5 </span>
+						<p>
+							Austria-Hungary seeks German support for a war against Serbia in
+							case of Russian militarism. Germany gives assurances of support.
+						</p>
+						<a href="#" class="read-more">Read more</a>
+					</div>
+				</div>
+				<!--/Timeline item-->
+
+				<!--Timeline item-->
+				<div class="timeline-carousel__item">
+					<div class="timeline-carousel__image">
+						<div
+							class="media-wrapper media-wrapper--overlay"
+							style="
+								background: url('https://cdn-images-1.medium.com/max/2000/1*tjpdoOeFp6PfczMjqh6JEA.jpeg')
+									center center;
+								background-size: cover;
+							"
+						></div>
+					</div>
+					<div class="timeline-carousel__item-inner">
+						<span class="year">1915</span>
+						<span class="month">January 2</span>
+						<p>
+							The Russian offensive in the Carpathians begins. It will continue
+							until April 12.
+						</p>
+						<a href="#" class="read-more">Read more</a>
+					</div>
+				</div>
+				<!--/Timeline item-->
+
+				<!--Timeline item-->
+				<div class="timeline-carousel__item">
+					<div class="timeline-carousel__image">
+						<div
+							class="media-wrapper media-wrapper--overlay"
+							style="
+								background: url('https://ichef-1.bbci.co.uk/news/660/media/images/72349000/jpg/_72349652_generals-on-horseback.jpg')
+									center center;
+								background-size: cover;
+							"
+						></div>
+					</div>
+					<div class="timeline-carousel__item-inner">
+						<div class="pointer"></div>
+						<span class="month">January 18–19 </span>
+						<p>Battle of Jassin.</p>
+						<a href="#" class="read-more">Read more</a>
+					</div>
+				</div>
+				<!--/Timeline item-->
+
+				<!--Timeline item-->
+				<div class="timeline-carousel__item">
+					<div class="timeline-carousel__image">
+						<div
+							class="media-wrapper media-wrapper--overlay"
+							style="background: #fff center center; background-size: cover"
+						></div>
+					</div>
+					<div class="timeline-carousel__item-inner">
+						<span class="year">1916</span>
+						<span class="month">January 5–17</span>
+						<p>
+							Austro-Hungarian offensive against Montenegro, which capitulates.
+						</p>
+						<a href="#" class="read-more">Read more</a>
+					</div>
+				</div>
+				<!--/Timeline item-->
+
+				<!--Timeline item-->
+				<div class="timeline-carousel__item">
+					<div class="timeline-carousel__image">
+						<div
+							class="media-wrapper media-wrapper--overlay"
+							style="
+								background: url('https://kidskonnect.com/wp-content/uploads/2010/10/Approaching_Omaha.jpg')
+									center center;
+								background-size: cover;
+							"
+						></div>
+					</div>
+					<div class="timeline-carousel__item-inner">
+						<div class="pointer"></div>
+						<span class="month">January 6–7 </span>
+						<p>Battle of Mojkovac.</p>
+						<a href="#" class="read-more">Read more</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Timeline carousel-->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+			integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<script>
+			$(document).ready(function () {
+				$('.timeline-carousel__item-wrapper').slick({
+					infinite: false,
+					arrows: false,
+					dots: true,
+					autoplay: false,
+					speed: 1100,
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					responsive: [
+						{
+							breakpoint: 800,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1,
+							},
+						},
+					],
+				});
+			});
+		</script>
+	</body>
+</html>
