@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #4158d0;
+	background-image: linear-gradient(
+		43deg,
+		#4158d0 0%,
+		#c850c0 46%,
+		#ffcc70 100%
+	);
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+section {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	perspective: 50px;
+	animation: move 5s alternate infinite;
+	.triangle {
+		position: absolute;
+		width: 40%;
+		height: 80%;
+		border: 2px solid #80d0c7;
+		box-shadow: 0 0 20px #0093e9, inset 0 0 20px #0093e9, 0 0 40px #00ff55,
+			inset 0 0 40px #00ff55;
+		filter: contrast(3) brightness(1.5);
+		animation: breathing 3s linear alternate infinite;
+	}
+	$property: 0px 0px, 20px -10px, 40px -20px, 60px -30px, 80px -40px,
+		100px -50px, 120px -60px, 140px -70px, 160px -80px, 180px -90px,
+		200px -100px, 220px -110px, 240px -120px, 260px -130px;
+	$i: 0s;
+	@each $y, $z in $property {
+		div:nth-child(#{index(($property),$y $z)}) {
+			$i: $i + 0.2s;
+			transform: rotate(40deg) translateY($y) translateZ($z);
+			animation-delay: $i;
+		}
+	}
+}
+@keyframes breathing {
+	100% {
+		filter: brightness(1.1) contrast(1);
+		// transform: rotate(0.1deg);
+	}
+}
+@keyframes move {
+	100% {
+		perspective: 30px;
+	}
+}
