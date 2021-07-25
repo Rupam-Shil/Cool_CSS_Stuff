@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Mak, sans-serif;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+::selection {
+	background: #fff;
+	color: #8d785b;
+}
+a {
+	color: inherit;
+}
+section {
+	background: #202217;
+	color: rgb(141, 120, 91);
+	padding: 2rem;
+	height: 100vh;
+	position: relative;
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.header__left {
+			font-family: Poppins, sans-serif;
+			flex: 2;
+		}
+		.header__middle {
+			font-size: 1.5em;
+			flex: 2;
+		}
+		nav {
+			flex: 1;
+			ul {
+				display: flex;
+				gap: 4em;
+				list-style: none;
+				font-family: Poppins, sans-serif;
+				li {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.circle {
+		transform: scale(0);
+		&-1 {
+			position: absolute;
+			height: 120px;
+			width: 120px;
+			background: #a83e0c;
+			border-radius: 50%;
+			top: 20%;
+			left: 15%;
+			z-index: 100;
+		}
+		&-2 {
+			position: absolute;
+			height: 180px;
+			width: 180px;
+			background: #a83e0c;
+			border-radius: 50%;
+			bottom: 20%;
+			right: 20%;
+			z-index: 1000;
+		}
+		&-3 {
+			height: 110vh;
+			width: 110vh;
+			border: 1px solid rgba(141, 120, 91, 0.5);
+			border-radius: 50%;
+			top: -5%;
+			left: 20%;
+			position: absolute;
+			z-index: 10;
+		}
+	}
+	a {
+		position: absolute;
+		bottom: 2rem;
+	}
+	.box {
+		position: absolute;
+		width: 25%;
+		height: 70vh;
+		right: 25%;
+		bottom: 0;
+		z-index: 0;
+		overflow: hidden;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.text-spread {
+		opacity: 0;
+		width: 52vw;
+		position: absolute;
+		height: 100vh;
+		top: 0;
+		left: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 5rem;
+		.t__1 {
+			position: absolute;
+			transform: scale(1);
+			top: initial;
+			left: 40%;
+		}
+		.t__2 {
+			position: absolute;
+
+			transform: scale(1);
+			bottom: initial;
+			left: 50%;
+		}
+		.t__3 {
+			position: absolute;
+
+			transform: scale(1);
+			top: initial;
+			left: 60%;
+		}
+		.t__4 {
+			position: absolute;
+			transform: scale(1);
+			bottom: initial;
+			left: 70%;
+			z-index: 500000;
+		}
+	}
+}
