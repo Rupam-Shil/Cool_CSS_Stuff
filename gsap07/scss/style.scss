@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;700&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Cormorant', serif;
+	width: 100vw;
+	height: 100%;
+	overflow: hidden;
+}
+li {
+	list-style: none;
+}
+.wrapper {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.loader {
+		width: 100px;
+		height: 100px;
+		background: #fff;
+	}
+	z-index: 10000000;
+}
+section {
+	height: 100vh;
+	max-width: 1200px;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	margin: 0 auto;
+	position: relative;
+	nav {
+		font-weight: 700;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		.left {
+			ul {
+				display: flex;
+				gap: 1rem;
+			}
+		}
+		.center {
+			justify-self: center;
+		}
+		.right {
+			justify-self: right;
+		}
+	}
+	.container {
+		width: 100%;
+		height: 95%;
+		position: relative;
+		display: grid;
+		grid-template-columns: 80% auto;
+		.left-side {
+			padding-top: 30%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			position: relative;
+			z-index: 1000;
+			h1.header {
+				font-size: 4rem;
+				font-weight: 700;
+				text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.733);
+			}
+			a {
+				color: #333;
+				font-weight: 700;
+			}
+		}
+		.right-side {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.top {
+				align-self: center;
+
+				p {
+					font-size: 2rem;
+					color: transparent;
+					-webkit-text-stroke: 1px #333;
+				}
+			}
+			.down {
+				display: flex;
+				justify-content: space-around;
+				height: 10%;
+				.left {
+					align-self: flex-end;
+				}
+			}
+		}
+	}
+	.img-wrapper {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 25%;
+		width: 25vw;
+		height: 75vh;
+		.img-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			z-index: 3;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+		}
+	}
+}
