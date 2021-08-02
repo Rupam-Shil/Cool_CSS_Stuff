@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Merriweather', serif;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+@mixin bgcenter {
+	background-position: center center;
+	background-size: cover;
+}
+section {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	.container {
+		width: 100%;
+		height: 100%;
+		background: #000;
+		.images {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+
+			.img {
+				width: 160px;
+				height: 190px;
+				filter: grayscale(1.2);
+				opacity: 0.6;
+				&-1 {
+					background: url('../assets/1.png');
+				}
+				&-2 {
+					transform: scale(1.3);
+					background: url('../assets/2.png');
+					@include bgcenter;
+				}
+				&-3 {
+					transform: scale(1.14) translateX(20px);
+
+					background: url('../assets/3.png');
+					@include bgcenter;
+				}
+				&-4 {
+					background: url('../assets/4.png');
+					@include bgcenter;
+				}
+				&-5 {
+					transform: scale(1.4);
+
+					background: url('../assets/5.png');
+					@include bgcenter;
+				}
+				&-6 {
+					transform: scale(1.2);
+
+					background: url('../assets/6.png');
+					@include bgcenter;
+				}
+				&-7 {
+					background: url('../assets/7.png');
+					@include bgcenter;
+				}
+			}
+		}
+		.navbar {
+			width: 100%;
+			text-transform: uppercase;
+			padding: 0 2rem;
+			position: absolute;
+			display: flex;
+			justify-content: space-around;
+			bottom: 10%;
+			p {
+				color: #fff;
+			}
+		}
+	}
+}
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 6rem;
+	opacity: 1;
+}
