@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+section {
+	width: 100vw;
+	height: 100vh;
+	background: rgb(241, 241, 241);
+	position: relative;
+	overflow: hidden;
+	h1 {
+		position: absolute;
+		font-size: 12rem;
+		color: rgb(22, 76, 255);
+		white-space: nowrap;
+	}
+	.skew1 {
+		position: relative;
+
+		transform: skewY(15deg);
+		h1 {
+			color: rgb(0, 0, 255);
+		}
+	}
+	.inner {
+		width: 50%;
+		height: 100%;
+		background: rgb(235, 235, 235);
+		overflow: hidden;
+		position: relative;
+		.skew2 {
+			position: relative;
+			transform-origin: 100% 50%;
+			transform: skewY(-15deg);
+		}
+	}
+}
