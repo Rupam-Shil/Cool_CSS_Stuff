@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Eagle Lake', cursive;
+	overflow: hidden;
+}
+section {
+	background: #000;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	.circle {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #c6e421;
+		transform: scale(1);
+		top: 5%;
+		right: 2%;
+		z-index: 1;
+	}
+	.closecircle {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #000;
+		transform: scale(0);
+		top: 5%;
+		right: 2%;
+		z-index: 2;
+	}
+	h1.secondary {
+		position: relative;
+		z-index: 1;
+		font-size: 4rem;
+		margin-left: 2rem;
+		pointer-events: none;
+	}
+	.container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+		h1 {
+			color: #fff;
+			font-size: 10vw;
+			position: relative;
+		}
+	}
+}
