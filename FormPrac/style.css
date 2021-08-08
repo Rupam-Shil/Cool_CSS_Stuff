@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	background: rgb(255, 133, 168);
+	background: linear-gradient(
+		216deg,
+		rgba(255, 133, 168, 1) 15%,
+		rgba(249, 137, 173, 1) 17%,
+		rgba(144, 197, 255, 1) 73%
+	);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.form {
+	width: 30vw;
+	height: 70vh;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+}
+.form .header {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.form .header h1 {
+	color: #fff;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.form .header .line {
+	background: #fff;
+	height: 5px;
+	width: 20%;
+}
+.form__elements {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.form__elements input {
+	height: 2.5rem;
+	outline: none;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	color: #fff;
+	font-weight: 800;
+	padding-left: 10px;
+}
+input::placeholder {
+	color: #fff;
+}
+.form__elements button {
+	width: 30%;
+	border: none;
+	background: #fff;
+	padding: 15px 10px;
+	border-radius: 100vmax;
+	color: rgb(75, 75, 75);
+	font-weight: 800;
+	font-size: 1rem;
+}
+.extra {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	color: #fff;
+}
+.extra .first {
+	display: flex;
+	gap: 0.5rem;
+}
+.extra .second {
+	display: flex;
+	gap: 0.5rem;
+}
+a {
+	color: #fff;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.boxfirst {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 50%;
+	left: 27%;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+}
+.boxsecond {
+	position: absolute;
+
+	width: 100px;
+	height: 100px;
+
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.2);
+	top: 10%;
+	left: 60%;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
