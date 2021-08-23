@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+section {
+	width: 100vw;
+	height: 100vh;
+	background-color: #85ffbd;
+	background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h1.bg__header {
+		position: absolute;
+		font-size: 15vw;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		color: rgba(0, 0, 0, 0.1);
+		z-index: 1;
+	}
+	.card {
+		position: relative;
+		z-index: 2;
+		width: 25%;
+		min-width: 300px;
+		background: #fff;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+		border-radius: 0.5rem;
+
+		&__default {
+			padding: 2rem;
+			&__user {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				.image {
+					width: 65px;
+					height: 65px;
+					border-radius: 50%;
+					img {
+						height: 100%;
+						width: 100%;
+						border-radius: 50%;
+					}
+				}
+				.details {
+					display: flex;
+					flex-direction: column;
+					gap: 0.3rem;
+					p {
+						font-weight: 700;
+						font-size: 1.2rem;
+						line-height: 1;
+					}
+					span {
+						color: rgb(117, 117, 117);
+					}
+				}
+			}
+			&__dropdown {
+				height: 0px;
+				overflow: hidden;
+
+				&.active {
+					height: max-content;
+
+					transition: 0.3s;
+					margin-top: 1rem;
+					border-top: 1px solid rgba(117, 117, 117, 0.4);
+					padding-top: 1rem;
+					ul {
+						display: flex;
+						flex-direction: column;
+						list-style: none;
+						gap: 0.5rem;
+						li {
+							display: flex;
+							align-items: center;
+							gap: 1rem;
+							cursor: pointer;
+							i {
+								font-size: 1.2rem;
+							}
+							a {
+								text-decoration: none;
+								color: inherit;
+								font-size: 1.2rem;
+							}
+							&:hover {
+								color: #00a04b;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		button.btn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			border: none;
+			outline: none;
+			background: rgb(30, 255, 0);
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			i {
+				transition: 0.2s;
+
+				&.rotate {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+}
