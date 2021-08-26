@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	min-height: 100vh;
+	width: 100vw;
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+section {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	width: 100%;
+}
+h1 {
+	color: #fff;
+	margin-bottom: 1rem;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+section .border {
+	min-width: 300px;
+	width: 50vw;
+	height: 20vh;
+	background: #f7f7f7;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-radius: 5px;
+	padding: 1rem;
+}
+section .border input {
+	outline: none;
+	border: none;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	text-align: center;
+	font-size: 2rem;
+	caret-color: #2e2e2e;
+}
+section ul {
+	list-style: none;
+}
+section ul li {
+	min-width: 250px;
+	width: 40vw;
+	height: 70px;
+	background: #fff;
+	border: 1px solid silver;
+	padding: 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+section ul li:nth-child(2n) {
+	-webkit-transform: perspective(100px) rotateX(2deg);
+	transform: perspective(100px) rotateX(2deg);
+}
+section ul li:nth-child(2n + 1) {
+	-webkit-transform: perspective(100px) translateY(1px) rotateX(-2deg);
+	transform: perspective(100px) translateY(1px) rotateX(-2deg);
+}
+section ul li:hover {
+	background: #f0f0f0;
+}
+section ul li a {
+	text-decoration: none;
+	color: #000;
+}
