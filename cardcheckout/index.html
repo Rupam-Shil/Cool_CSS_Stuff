@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Card Checkout</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<section>
+			<div class="card">
+				<div class="card-body">
+					<img src="./assets/chip.png" alt="" />
+					<div class="card-body-no">
+						<label>Card No.</label>
+						<input
+							type="text"
+							placeholder="0123 4567 8910 1112"
+							maxlength="19"
+							required
+						/>
+					</div>
+					<div class="card-body-name">
+						<label>Card Holder</label>
+						<input type="text" placeholder="Rupam Shil" required />
+					</div>
+					<div class="card-body-date">
+						<label>Vaild Upto</label>
+						<input type="text" placeholder="MM/YY" required maxlength="5" />
+					</div>
+					<div class="card-body-cvv">
+						<label>CVV</label>
+						<input
+							class="input-cvv"
+							type="text"
+							required
+							maxlength="3"
+							placeholder="***"
+						/>
+					</div>
+					<div class="bank-name">
+						<input
+							class="bank-name-input"
+							type="text"
+							required
+							placeholder="State Bank Of India"
+						/>
+					</div>
+					<div class="two-circle">
+						<div class="circle orange"></div>
+						<div class="circle red"></div>
+					</div>
+				</div>
+				<div class="card-submit">
+					<button type="submit">Confirm and Pay</button>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,146 @@
+@use 'utils/default';
+
+.width-height {
+	height: 45vh;
+	width: 35%;
+	min-width: 450px;
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+	background-color: #0093e9;
+	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.card {
+		@extend .width-height;
+		position: relative;
+		border-radius: 10px;
+		&-body {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background: #fff;
+			border-radius: inherit;
+			padding: 1.5rem;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			align-items: center;
+			img {
+				width: auto;
+				height: 40px;
+				grid-column: 1/3;
+				grid-row: 1/2;
+			}
+			label {
+				display: block;
+				font-size: 0.9rem;
+				color: #00a0da;
+			}
+			.bank-name {
+				grid-column: 2/-1;
+				grid-row: 1/2;
+				justify-self: end;
+			}
+			.card-body-no {
+				grid-column: 1 / span 3;
+				grid-row: 2/3;
+			}
+			.card-body-name {
+				grid-column: 1 / span 3;
+				grid-row: 3/4;
+			}
+			.card-body-date {
+				grid-column: 1 / span 2;
+				grid-row: 4 / span 1;
+			}
+			.card-body-cvv {
+				grid-column: 3 / span 2;
+				grid-row: 4 / span 1;
+				justify-self: end;
+				text-align: right;
+			}
+			.two-circle {
+				display: flex;
+				justify-self: end;
+				align-self: center;
+				grid-row: 2 / span 2;
+				.circle {
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+				}
+				.orange {
+					background: #ef991a;
+				}
+				.red {
+					background: #e4001a;
+					margin-left: -10px;
+				}
+			}
+			input {
+				border: none;
+				outline: none;
+				font-size: 1.1rem;
+				font-weight: 400;
+				color: rgb(0, 0, 0);
+				&::placeholder {
+					color: rgb(107, 107, 107);
+				}
+			}
+			.input-cvv {
+				text-align: right;
+				width: max-content;
+				&::placeholder {
+					letter-spacing: 1.3px;
+				}
+			}
+			.bank-name-input {
+				text-align: right;
+			}
+		}
+		&-submit {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			padding: 0.8rem;
+			top: 0;
+			left: 0;
+			position: absolute;
+			background-color: #4158d0;
+			background-image: linear-gradient(
+				43deg,
+				#4158d0 0%,
+				#c850c0 46%,
+				#ffcc70 100%
+			);
+			border-radius: inherit;
+			z-index: 0;
+			transition: 0.3s;
+			button {
+				outline: none;
+				border: none;
+				padding: 1rem 2rem;
+				letter-spacing: 2px;
+				cursor: pointer;
+				transition: 0.3s;
+				background: #fff;
+				font-size: 1.1rem;
+				&:hover {
+					letter-spacing: 3px;
+				}
+			}
+		}
+		&:hover .card-submit {
+			transform: translateY(70px) scale(1.1);
+		}
+	}
+}
