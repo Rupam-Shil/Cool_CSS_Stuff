@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+section.hero {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+}
+section.hero .gif {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.hero .gif img {
+  width: 45rem;
+  user-select: none;
+}
+section.hero header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.hero header .logo img {
+  width: 12rem;
+  height: auto;
+}
+section.hero header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+section.hero header nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+section.hero header nav ul li {
+  transition: 0.3s;
+}
+section.hero header nav ul li:hover {
+  transform: translateY(-5px);
+}
+section.hero .hero__section {
+  height: 80%;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 70% auto;
+}
+section.hero .hero__section a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 0.5rem 1rem;
+  background: #4d4d4d;
+  font-size: 0.8rem;
+}
+section.hero .hero__section-right {
+  display: grid;
+  grid-template-rows: 95% auto;
+}
+section.hero .hero__section-right__top {
+  align-self: center;
+}
+section.hero .hero__section-right__top h1 {
+  width: 80%;
+  color: #fff;
+  font-size: clamp(40px, 10vw, 70px);
+}
+section.hero .hero__section-right__bottom {
+  align-self: end;
+  display: flex;
+  gap: 1rem;
+}
+section.hero .hero__section-right__bottom button {
+  outline: none;
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #333;
+}
+section.hero .hero__section-right__bottom button.active {
+  background: #7e7e7e;
+}
+section.hero .hero__section-left {
+  align-self: end;
+}
+section.hero .hero__section-left p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
