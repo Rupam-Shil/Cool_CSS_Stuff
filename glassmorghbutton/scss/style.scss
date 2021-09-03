@@ -1,0 +1,59 @@
+@import 'default';
+
+:root {
+	--distance: 50%;
+	--color: yellow;
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+	background: hsl(232, 50%, 23%);
+	display: grid;
+	place-content: center;
+	nav {
+		ul {
+			position: relative;
+			list-style: none;
+			display: flex;
+			background: hsl(232, 50%, 30%);
+			box-shadow: 0 0 25px hsl(232, 50%, 14%);
+			isolation: isolate;
+			&::after {
+				content: '';
+				position: absolute;
+				top: -10px;
+				left: var(--distance);
+				transform: translateX(-50%);
+				width: 50px;
+				height: 70px;
+				background: var(--color);
+				border-radius: 5px;
+				z-index: -1;
+				transition: 0.5s;
+			}
+			li {
+				a {
+					display: block;
+					padding: 1rem 1.5rem;
+					transition: 0.3s;
+					&.active {
+						backdrop-filter: blur(10px);
+						background: inherit !important;
+
+						i {
+							color: #fff;
+						}
+					}
+					&:hover {
+						background: hsl(231, 51%, 22%);
+					}
+				}
+				i {
+					font-size: 2rem;
+					color: hsl(230, 5%, 56%);
+				}
+			}
+		}
+	}
+}
