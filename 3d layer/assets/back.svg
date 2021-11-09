@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1079" height="1915" viewBox="0 0 1079 1915">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ec5252;
+        stroke: #e12345;
+        stroke-width: 4px;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <rect id="back.svg" class="cls-1" x="2" y="2" width="1075" height="1911"/>
+</svg>

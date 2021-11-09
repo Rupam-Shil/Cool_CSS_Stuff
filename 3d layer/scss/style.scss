@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #f6a9a9;
+}
+.layers {
+	position: relative;
+	min-height: 640px;
+	max-width: 360px;
+	img {
+		position: absolute;
+		max-width: 100%;
+		height: 100%;
+		transition: all ease 1.6s;
+		transform-style: preserve-3d;
+		&.mid {
+			width: 320px;
+			left: 20px;
+		}
+		&.top {
+			width: 300px;
+			left: 30px;
+			top: -5px;
+		}
+		&.tippy {
+			width: 280px;
+			left: 40px;
+			top: -150px;
+		}
+	}
+	&:hover img {
+		transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+			translateX(35px) translateY(0px) translateZ(180px);
+	}
+	&:hover img.mid {
+		transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+			translateX(35px) translateY(0px) translateZ(240px);
+	}
+	&:hover img.top {
+		transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+			translateX(35px) translateY(0px) translateZ(280px);
+	}
+	&:hover img.tippy {
+		transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+			translateX(35px) translateY(0px) translateZ(260px);
+	}
+}

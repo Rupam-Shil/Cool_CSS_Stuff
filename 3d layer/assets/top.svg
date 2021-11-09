@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="892" height="1701" viewBox="0 0 892 1701">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #ec5252;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+        opacity: 0.6;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="987" y1="1546.708" x2="99" y2="368.292" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6e0e0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <path id="top.svg" class="cls-1" d="M376,163v-4H545v4H376Zm217,0v-4H762v4H593Zm211,0v-4H973v4H804ZM108,109H296a6,6,0,0,1,6,6v88a6,6,0,0,1-6,6H108a6,6,0,0,1-6-6V115A6,6,0,0,1,108,109ZM563,334H972a4,4,0,0,1,4,4V706a4,4,0,0,1-4,4H563a4,4,0,0,1-4-4V338A4,4,0,0,1,563,334Zm-453,0H519a4,4,0,0,1,4,4V706a4,4,0,0,1-4,4H110a4,4,0,0,1-4-4V338A4,4,0,0,1,110,334ZM237.5,860A138.5,138.5,0,1,1,99,998.5,138.5,138.5,0,0,1,237.5,860Zm302,0A138.5,138.5,0,1,1,401,998.5,138.5,138.5,0,0,1,539.5,860Zm302,0A138.5,138.5,0,1,1,703,998.5,138.5,138.5,0,0,1,841.5,860Zm-597,330A138.5,138.5,0,1,1,106,1328.5,138.5,138.5,0,0,1,244.5,1190Zm302,0A138.5,138.5,0,1,1,408,1328.5,138.5,138.5,0,0,1,546.5,1190Zm302,0A138.5,138.5,0,1,1,710,1328.5,138.5,138.5,0,0,1,848.5,1190ZM119,1635v-4H974v4H119Zm0,57v-4H974v4H119Zm0,57v-4H974v4H119Zm0,57v-4H974v4H119Z" transform="translate(-97 -107)"/>
+</svg>
