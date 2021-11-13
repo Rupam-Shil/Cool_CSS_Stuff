@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+:root {
+	--bg: #121113;
+	--size: 200px;
+	--inv-size: -var(--size);
+}
+.main {
+	background: var(--bg);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box {
+	width: var(--size);
+	aspect-ratio: 1;
+	transform-style: preserve-3d;
+	transform: perspective(1000px) rotateX(-45deg) rotateY(0deg);
+
+	animation: rotate 10s linear infinite;
+	// position: relative;
+	.face {
+		position: absolute;
+		inset: 0;
+		width: var(--size);
+		aspect-ratio: 1;
+		background: #232123;
+		&-1 {
+			transform: translateZ(100px);
+			background: rgb(255, 0, 0);
+			background: linear-gradient(
+				0deg,
+				rgba(255, 0, 0, 1) 0%,
+				rgba(35, 33, 35, 1) 78%
+			);
+		}
+		&-2 {
+			transform-origin: left;
+			transform: translateZ(100px) rotateY(90deg);
+			background: rgb(255, 0, 0);
+			background: linear-gradient(
+				0deg,
+				rgba(255, 0, 0, 1) 0%,
+				rgba(35, 33, 35, 1) 78%
+			);
+		}
+		&-3 {
+			transform-origin: right;
+			transform: translateZ(100px) rotateY(-90deg);
+			background: rgb(255, 0, 0);
+			background: linear-gradient(
+				0deg,
+				rgba(255, 0, 0, 1) 0%,
+				rgba(35, 33, 35, 1) 78%
+			);
+		}
+		&-4 {
+			transform: translateZ(-100px);
+			background: rgb(255, 0, 0);
+			background: linear-gradient(
+				0deg,
+				rgba(255, 0, 0, 1) 0%,
+				rgba(35, 33, 35, 1) 78%
+			);
+		}
+		&-5 {
+			transform-origin: top;
+			transform: translateZ(100px) rotateX(-90deg);
+			background: #3d3c3d;
+		}
+		&-6 {
+			transform-origin: bottom;
+			transform: scale(1.2) translateZ(100px) translateY(50px) rotateX(90deg);
+			background: red;
+			box-shadow: 0 0 240px rgb(255, 0, 0), 0 0.5px 260px rgb(255, 0, 0);
+			filter: blur(20px);
+		}
+	}
+}
+@keyframes rotate {
+	100% {
+		transform: perspective(1000px) rotateX(-45deg) rotateY(360deg);
+	}
+}
