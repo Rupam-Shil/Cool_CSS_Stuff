@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--bg);
+	color: var(--white);
+}
+
+:root {
+	--bg: #222328;
+	--green: #28fb56;
+	--white: #fff;
+	--light: #69686b;
+	--left: 8.5%;
+}
+.navbar {
+	background: var(--white);
+	display: flex;
+	color: var(--bg);
+	padding: 1rem 3rem;
+	border-radius: 1rem;
+	position: relative;
+	isolation: isolate;
+	gap: 2rem;
+	.each {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		cursor: pointer;
+		width: 50px;
+		& > *:first-child {
+			font-size: 1.5rem;
+			transition: 0.3s;
+		}
+		.tooltip {
+			color: var(--light);
+			display: none;
+		}
+		&.active {
+			& > *:first-child {
+				transform: translateY(-110%);
+			}
+			.tooltip {
+				display: block;
+			}
+		}
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		width: 4rem;
+		top: 0;
+		left: var(--left);
+		transform: translateY(-50%);
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: var(--green);
+		z-index: -1;
+		border: 5px solid var(--bg);
+		transition: 0.3s;
+	}
+}
